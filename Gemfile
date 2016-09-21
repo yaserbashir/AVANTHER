@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form', '~> 3.1'
+gem 'bcrypt', '~> 3.1', '>= 3.1.5'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'sqlite3'
