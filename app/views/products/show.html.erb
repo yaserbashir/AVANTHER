@@ -18,3 +18,10 @@
 <% end %>
 
 <h3><%= @product.user_id %></h3>
+
+
+
+<%= image_tag @product.image_url.to_s if @product.image? %>
+
+
+

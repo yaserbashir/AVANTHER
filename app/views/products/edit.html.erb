@@ -3,10 +3,29 @@
 <%= simple_form_for @product, :html => { :multipart => true } do |f| %>
 
 
-  <%= f.select :category_id, categories %>
-  <%= f.input :title, label: "Item name" %>
-  <%= f.input :description %>
-  <%= f.input :designer %>
-  <%= f.input :size %>
-  <%= f.button :submit %>
-<% end %>
+    <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this Item from being saved:</h2>
+ 
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <div class="field">
+    <%= f.input :title, label: "Item name" %>
+  	<%= f.input :description %>
+  	<%= f.input :designer %>
+  	<%= f.input :size %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+  <% end %>
