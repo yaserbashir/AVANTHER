@@ -1,6 +1,26 @@
-<h2><%= @product.title %></h2>
-<h3><%= @product.designer %></h3>
-<p><%= @product.description %></p>
+<div class="row">
+
+	<div class="col-md-4">
+	<%= image_tag @product.img.url(:product_show), class: "product-show" %>
+
+	</div>
+
+	<div class="col-md-8">
+		<h2><%= @product.title %></h2>
+		<h3><%= @product.designer %></h3>
+		<p><%= @product.description %></p>
+		<h3><%= @product.user_id %></h3>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-md-4">
+	
+	</div>
+
+</div>
 
 <%= link_to "Back", root_path %>
 
@@ -17,11 +37,11 @@
 
 <% end %>
 
-<h3><%= @product.user_id %></h3>
 
 
 
-<%= image_tag @product.image_url.to_s if @product.image? %>
+
+
 
 
 

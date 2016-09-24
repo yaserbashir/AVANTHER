@@ -1,11 +1,19 @@
+<div class="container">
 
-<%= @products.each do |product| %>
-<h2><%= link_to product.title, product_path(product) %></h2>
-<%#<a href="/products/<%= product.id%>
-<%#image_tag product.image </a>%>
+	<div class="row">
 
-<% end %>
+	<%= @products.each do |product| %>
+			<div class="col-md-3">
+			<%#erlaubt 4 Artikel nebeneinander col = colum , insgesamt gibt es 12 und diese werden durch 3 geteilt%>
 
+				<a href="/products/<%= product.id %>">
+	 			<%=image_tag product.img.url(:product_index), class: "product"  %>
+	 				
+	 			</a>
+			<div>
+		<% end %>
+	</div>
+</div>
 
 
 
