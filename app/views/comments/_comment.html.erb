@@ -1,0 +1,21 @@
+<div class="comment">
+	
+		<div class="col-md-12">
+
+	<p class="comment-posted-by" class="comment-time"><%= @product.user.name%> <%= time_ago_in_words(@product.created_at) %> ago</p>
+		
+
+
+
+	<p class="comment-content"><%= comment.content %></p>
+		</div>
+	
+</div>
+
+<%#<% if @comment.empty?<div class="No-comments-yet">no Comment yet </div><% end %>
+
+
+<%#<%= link_to "Delete", product_comment_path(comment.product, comment), method: :delete, data:{ confirm: "Are you sure?" } %>
+
+<%#Kack spinnt irgendwie%>
+

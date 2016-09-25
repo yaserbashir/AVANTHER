@@ -2,7 +2,10 @@ Rails.application.routes.draw do
  
   get 'sessions/new'
 
- resources :products
+ resources :products do
+ 	resources :comments
+ end
+
 
  get  '/signup',  to: 'users#new'
  post '/signup',  to: 'users#create'

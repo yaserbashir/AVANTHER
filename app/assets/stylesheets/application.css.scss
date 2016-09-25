@@ -23,9 +23,11 @@
   box-sizing:         border-box;
 }
 
+/* Pictures */
+
 .product {
-  height: 350px;
-  width:250px;
+  height: 250px;
+  width:200px;
 }
 
 .product-show {
@@ -77,4 +79,18 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+/* Comment */
+
+.comment-posted-by {
+  font-size: 1.2em;
+}
+
+.comment-content {
+  font-size: 0.8em;
+}
+
+.comment-time {
+  font-size: 0.8em;
 }
