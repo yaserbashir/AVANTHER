@@ -1,33 +1,37 @@
+<div class="container">
 
-<div class="row">
+	<div class="row">
 
-	<div class="col-md-4">
-		<p>Posted by <%= @product.user.name %>  <%= time_ago_in_words(@product.created_at) %>	
-		ago </p>
-	</div>
-</div>
-
-<div class="row">
-
-	<div class="col-md-4">
-	<%= image_tag @product.img.url(:product_show), class: "product-show" %>
-
+		<div class="col-md-4">
+			<p>Posted by <%= @product.user.name %>  <%= time_ago_in_words(@product.created_at) %>	
+			ago </p>
+		</div>
 	</div>
 
-	<div class="col-md-8">
-		<h2><%= @product.title %></h2>
-		<h3><%= @product.designer %></h3>
-		<p><%= @product.description %></p>
-		<h3><%= @product.user.name %></h3>
-		<h3> Comments:</h3>
-			<%= render @product.comments %>
+	<div class="row">
 
-		<% if logged_in? %>
+		<div class="col-md-4">
+		<%= image_tag @product.img.url(:product_show), class: "product-show" %>
+		</div>
 
-				<h3>Comments:</h3>
-					<%= render 'comments/form' %>
+				<div class="col-md-8">
+					<h2><%= @product.title %></h2>
+					<h3><%= @product.designer %></h3>
+					<p><%= @product.description %></p>
+					<h3><%= @product.user.name %></h3>
+					
+					<h3> Comments:</h3>
+						<%= render @product.comments %>
 
-		<% end %>
+					<% if logged_in? %>
+
+							<h3>Comments:</h3>
+								<%= render 'comments/form' %>
+
+					<% end %>
+
+		
+				</div>
 
 	</div>
 
