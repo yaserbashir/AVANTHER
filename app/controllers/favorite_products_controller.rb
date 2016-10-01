@@ -12,6 +12,8 @@ class FavoriteProductsController < ApplicationController
 
   def index
    @products = current_user.favorite_products  
+
+   
   end
 
   def create
