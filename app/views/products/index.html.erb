@@ -1,21 +1,26 @@
+<div class="container">
+  <div class="row">
+           <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+  </div>
+</div>
 
 
-	<div class="container">
-	<div class="row">
+<div class="row">
+	<h1>Avant Her</h1>
+</div>
 
-	<%= @products.each do |product| %>
-			<div class="col-xs-6 col-md-3">
-			<%#erlaubt 4 Artikel nebeneinander col = colum , insgesamt gibt es 12 und diese werden durch 3 geteilt%>
+	<%= render 'indexbilder' %>
 
-				<a href="/products/<%= product.id %>">
-	 			<%=image_tag product.img.url(:product_index), class: "product"  %>
-	 				
-	 			</a>
-			<div>
-		<% end %>
-	</div>
 
-		</div">
 
 
 

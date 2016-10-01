@@ -1,0 +1,41 @@
+
+
+
+<div class="row">
+	<h1>+</h1>
+</div>
+
+	<div class="container">
+			
+		<div class="row">
+
+
+	<%= @products.each do |product| %>
+
+					<div class="col-md-3">
+
+				<a href="/products/<%= product.id %>">
+	 			<%=image_tag product.img.url(:product_index), class: "product"  %>
+	 				</a>
+
+	 				</div>
+
+	 				
+			
+			
+			
+
+			
+
+				<% end %>
+
+				</div>
+
+	</div>
+
+
+<div class="row">
+	<div class="name-unten-closet">
+ 		<%= link_to current_user.name, current_user %>
+ 	</div>
+</div>

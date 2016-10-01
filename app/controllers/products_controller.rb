@@ -1,13 +1,22 @@
 class ProductsController < ApplicationController
-	
-	before_action :find_product, only: [:show, :edit, :update, :destroy]
 
+
+		
+	before_action :find_product, only: [:show, :edit, :update, :destroy]
+	
+	
 
 	def index
-		@products = Product.all.order("created_at DESC")
+		  @products = Product.all.order("created_at DESC")
+		  if params[:search]
+		    @products = Product.search(params[:search]).order("created_at DESC")
+		  else
+		    @products = Product.all.order('created_at DESC')
+		  end
 	end
 
 	def show
+		
 	end
 
 	def new
@@ -29,14 +38,17 @@ class ProductsController < ApplicationController
 
 	def update
 		if @product.update(product_params)
+			flash[:success] = "Item updated."
 			redirect_to product_path(@product)
 		else
+			flash[:alert] = "Update failed.  Please check the form."
 			render 'edit'
 		end
 	end
 
 	def destroy
 		@product.destroy
+		flash[:success] = "Your Item has been deleted."
 		redirect_to root_path
 	end
 

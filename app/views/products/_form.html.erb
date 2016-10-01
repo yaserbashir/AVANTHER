@@ -11,18 +11,45 @@
       </ul>
     </div>
   <% end %>
- 
-  <div class="field">
+
+ <div class="row">
+    <div class="col-md-offset-1 col-md-5">
     <%= f.input :title, label: "Item name" %>
-    <%= f.input :description %>
+    </div>
+  
+    <div class="col-md-5">
     <%= f.input :designer %>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-5">
     <%= f.input :size %>
+    </div>
+</div>
+    
+
+<div class="row">
+   <div class="col-xs-offset-1 col-xs-10">
+    <%= f.input :description %>
+    </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-offset-4 col-md-5">
     <%= f.file_field :img %>
   </div>
+</div>
 
-  <div class="actions">
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10">
     <%= f.submit %>
   </div>
+</div>
+
 <% end %>
 
 

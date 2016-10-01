@@ -2,6 +2,11 @@ class CommentsController < ApplicationController
 	before_action :find_product
 	before_action :find_comment, only: [:destroy]
 
+	def show
+		@comment = Comment.each.order("created_at DESC")
+	end
+
+
 	def create
 		@comment = @product.comments.create(comment_params)
 		@comment.user_id = current_user.id
@@ -11,7 +16,10 @@ class CommentsController < ApplicationController
 		else
 			render 'new'
 		end
-	end
+
+	
+    end
+	
 
 	def destroy
 		@comment.destroy
@@ -20,7 +28,7 @@ class CommentsController < ApplicationController
 
 
 
-	private
+private
 
 	def comment_params
 		params.require(:comment).permit(:content)
@@ -28,8 +36,14 @@ class CommentsController < ApplicationController
 	
 	def find_product
 		@product = Product.find(params[:product_id])
+	end
 
 	def find_comment
 		@comment = @product.comments.find(params[:id])
 	end
+
 end
+
+
+
+

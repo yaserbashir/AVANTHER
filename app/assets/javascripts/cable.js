@@ -11,3 +11,13 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+
+var Favorite = React.createClass({
+  getInitialState: function() {
+    return { 
+      isFavorite: '',
+      isSignedIn: '',
+    };
+  },
+
+  

@@ -11,6 +11,13 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'fog', '~> 1.38'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+
+gem 'haml', '~> 4.0', '>= 4.0.7'
+
+
+
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'sqlite3'
 gem 'puma', '~> 3.0'
@@ -25,10 +32,13 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'faker', '~> 1.6', '>= 1.6.3'
 end
 
 group :development do
 
+
+  gem 'faker', '~> 1.6', '>= 1.6.3'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring', '~> 1.3', '>= 1.3.6'

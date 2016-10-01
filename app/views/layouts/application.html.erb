@@ -9,15 +9,33 @@
   </head>
 
   <body>
+
+<%#begin
+<% if notice 
+    <div id="notice_wrapper">
+      <p class="notice"><%= notice </p>
+    </div> 
+ <% elsif alert 
+    <div id="notice_wrapper">
+      <p class="alert"><%= alert </p> 
+    </div> 
+  
+  <% end %> 
+
+   <div class="container">
+      <div id="notice_wrapper">
+           
+           <% flash.each do |message_type, message| %>
+           <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+
+        </div> 
+
+        <% end %>
+
   	
  <%= render 'layouts/header' %>
 
-    <div class="container">
-         
-         <% flash.each do |message_type, message| %>
-         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-
-      <% end %>
+   
       <%= yield %>
       
 
