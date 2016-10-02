@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
-  product: one
-  favorited: one
-  favorited_type: Favorited
+#one:
+#  user: one
+#  product: one
+#  favorited: one
+#  favorited_type: Favoritable
 
-two:
-  user: two
-  product: two
-  favorited: two
-  favorited_type: Favorited
+#two:
+#  user: two
+#  product: two
+#  favorited: two
+#  favorited_type: Favoritable

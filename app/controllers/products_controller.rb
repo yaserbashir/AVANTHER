@@ -27,6 +27,7 @@ class ProductsController < ApplicationController
 		@product = current_user.products.build(product_params)
 
 		if @product.save
+			flash[:success] = "Congrats, you've added an Item!"
 			redirect_to root_path
 		else
 			render 'new'
