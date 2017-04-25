@@ -1,0 +1,350 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'slick';
+@import 'slick-theme';
+
+@font-face {
+  font-family: "modern";
+  src: url('/assets/Modern');
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: (1600px - @grid-gutter-width);
+    }
+}
+@media screen and (min-width: 1900px) {
+    .container {
+        max-width: (1900px - @grid-gutter-width);
+    }
+}
+
+  
+
+.container-full {
+ width: 100vw;
+ margin
+}
+
+.anfahrt {
+   margin-left: 400px;
+
+}
+
+
+.mitte {
+
+
+   padding-left: 500px;
+   
+}
+
+
+.img-photo {
+  width: 500px;
+  height: 400px;
+  float: left;
+}
+
+.kaka {
+  margin: 0 auto;
+}
+
+.erreichen {
+  background-color: #eaeaea;
+  width: 500px;
+  height: 400px;
+  float: center;
+  border: 1px solid #eaeaea;
+}
+
+.öffnungszeiten {
+ 
+  width: 1085px;
+  height: 400px;
+  float: center;
+  background-color: #eaeaea;
+  border: 1px solid #eaeaea;
+   
+}
+
+.map {
+  
+
+  float: left;
+
+  
+}
+
+h2.fixed {
+  font-family: "modern", "Arial Black", sans-serif;
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+  margin: 20px;
+
+}
+
+.fixed {
+  float: center;
+  margin: 40px;
+  
+}
+
+.wirtshaus {
+  padding-left: 100px;
+  
+}
+
+.ffixed {
+   width: 15%;
+  padding-right: 10; 
+  float: left;
+  margin: 25px;
+  
+}
+
+.unten {
+ 
+  width: 30%;
+  
+  float: left;
+  margin: 30px;
+ 
+}
+
+
+img {
+  display: block;
+
+}
+
+
+.img-circular{
+ width: 300px;
+ height: 300px;
+ background-size: cover;
+ display: block;
+ border-radius: 300px;
+ -webkit-border-radius: 300px;
+ -moz-border-radius: 300px;
+ margin-left: 250px;
+}
+
+
+
+
+/* Logo */
+
+
+.logo img {
+    margin: 0 auto;
+}
+
+/* Scroller */
+
+.scroller {
+    text-align: center;
+    float: center;
+    font-size: 30px;
+    margin: 0 20px;
+  
+}
+
+.slick-prev::before, .slick-next::before {
+  color: #000;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev {
+  left: 10px;
+}
+/* BODY application */
+
+body {
+  
+  
+}
+
+/* Center application */
+
+.center {
+  text-align: center;
+}
+
+
+
+/* typography */
+
+h1, h2, h3, h4 {
+  line-height: 1;
+}
+
+h6 {
+  font-family: "modern", "Arial Black", sans-serif;
+  font-size: 3em;
+  letter-spacing: -1px;
+  text-align: center;
+  font-weight: 900;
+  color: #777;
+  margin: 50px;
+}
+
+h1 {
+  font-family: "modern", "Arial Black", sans-serif;
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "modern", "Arial Black", sans-serif;
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+  margin: 20px;
+}
+
+h3 {
+  font-family: "modern", "Arial Black", sans-serif;
+  font-size: 2.7em;
+  letter-spacing: -1px;
+  margin-bottom: 0px;
+  text-align: left;
+  font-weight: normal;
+  margin: 20px;
+}
+
+h4 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 0px;
+  text-align: left;
+  font-weight: normal;
+  margin: 20px;
+
+}
+
+h5 {
+  font-family: "modern", "Arial Black", sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 1.7em;
+  margin-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+p {
+  
+  font-size: 1.4em;
+  text-align: left;
+  line-height: 1.7em;
+  margin-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* header */
+
+.navbar a {
+  
+  background-color: white, width: 100%;
+  padding: 40px; /*entfernung auseinander>*/
+  margin: 0 17px;
+  text-decoration:none; 
+  font-family: "modern", "Arial Black", sans-serif;
+  color: #191919;
+
+
+ }
+
+
+
+/* footer */
+
+footer {
+  
+  text-align: center;
+  background-color: #eaeaea;
+  margin-top: 0px;
+  padding: 30px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  
+}
+
+.well-block {
+    background-color: #fff;
+    border: 1px solid #e9e6e8;
+    padding: 40px;
+}
+
+.well-title {
+    margin-bottom: 40px;
+}
+
+#popup {
+    z-index:99999;
+    height: 850px;
+    width: 800px;
+    text-align: center;
+    vertical-align:left;
+    background-color: #eaeaea;
+    color: black;
+    display: none;
+    padding-top: 8px;
+    
+
+    position: absolute;
+    top:0px;
+}
+
+
+.wochi {
+  text-align: center;
+  padding-left: 40px;
+  font-size: 40pt;
+}
+
+
+dl.wochenkarte {
+  border: 20px solid white;
+  padding: 30px;
+}
+
+h3.obenmitte {
+  text-align: center;
+  color:;
+}
+
+hr {
+  color:white;
+}
+
+.photosh
+{
+  opacity:1;
+  transition: opacity .2s ease-in;
+}
+
+.photosh:hover
+{
+  opacity:0.5;
+  transition: opacity .2s ease-out;
+  -moz-transition: opacity .2s ease-out;
+  -webkit-transition: opacity .2s ease-out;
+  -o-transition: opacity .2s ease-out;
+}

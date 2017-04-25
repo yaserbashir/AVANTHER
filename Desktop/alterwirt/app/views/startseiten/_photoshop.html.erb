@@ -1,0 +1,124 @@
+
+
+<br>
+<div class="mitte">
+<div class="row">
+     <div class="col-md-6">
+           <div class="photosh">
+		<%= link_to image_tag("Speisen & Getränke.jpg", :height => 400, :width => 1085), startseiten_speisen_a_getraenke_path %>
+	 </div>
+ </div>
+	<div class="col-md-6">
+	      <div class="photosh">
+				<%= link_to image_tag("Öffnungszeiten.jpg", :height => 400, :width => 500), '#' %>
+	 	</div>
+	</div>
+ </div>
+
+
+<br>
+
+	<div class="row">
+        <div class="col-md-6">
+        	<div class="photosh">
+         <%= link_to image_tag("Gästezimmer.jpg", :height => 400, :width => 1085), '#' %>
+         	</div>
+ 		</div>
+
+		<div class="col-md-6">
+			<div id='user'>
+				
+		 <%= link_to image_tag("Wochenkarte.jpg", :height => 400, :width => 500), '#' %>
+
+ 		 	</div>
+ 		 	<div id='popup'><%= render 'startseiten/wochenkarte' %>
+ 		 	</div>
+		</div>
+    </div>
+
+<br>
+
+	<div class="row">
+	     <div class="col-md-6">
+	     <div class="photosh">
+		 <%= link_to image_tag("Ihr schönster Tag.jpg", :height => 400, :width => 1085), '#' %>
+		  </div>
+		 </div>
+		<div class="col-md-6">
+		  <div class="photosh">
+		<%= link_to image_tag("Kalender.jpg", :height => 400, :width => 500), '#' %>
+		 </div>
+		</div>
+    </div>
+	<br>
+
+<div class="row">
+	<div class="col-md-3">
+		<div class="erreichen">
+		<h3>SO ERREICHEN SIE UNS</h3>
+		<p>Taufkirchener Straße 4</p>
+		<p>85662 Hohenbrunn</p>
+		<br>
+		<p>Tel. (08102) 8 97 97 40</p>
+		<p>Fax. (08102) 8 97 97 41</p>
+		<p>Mail</p>
+		</div>
+	</div>
+
+  <div class="col-md-3">
+<div style='width: 535px;'>
+  <div id="map" style='width: 535px; height: 400px;'></div>
+</div>
+
+<script type="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers([
+    {
+      "lat": 48.04808,
+      "lng": 11.70095,
+      "picture": {
+        "url": "http://maps.google.com/mapfiles/ms/icons/blue.png",
+        "width":  320,
+        "height": 320
+      },
+      "infowindow": "hello!"
+    }
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});   
+</script>
+</div>
+
+
+
+	<div class="col-md-3">
+		<%= link_to image_tag("Veranstaltungen.jpg", :height => 400, :width => 500), '#' %>
+	</div>
+</div>
+<br>
+
+	<div class="row">
+	
+	<div class="col-md-6">
+
+			<div class="öffnungszeiten">
+			<h3>NEU</h3>
+			  <p>Im Wirtshaus finden immer wieder verschiedene, tolle Veranstaltungen statt. >> Mehr dazu... </p>
+		      <p>Unter der Woche bieten wir täglich drei verschiedene Mittagsgerichte schon ab € 6,80 an. >> Mehr dazu... </p>
+		      <p>Kesselfrische Weißwürst gibt´s jeden Samstag und Sonntag gleich in der Früh - solang der Vorrat reicht.</p>
+		      <p>Aktuell: Teamfähige und freundliche Verstärkung für unser Service-Team gesucht. Interesse? Bitte rufen Sie uns an.</p>
+			<p></p>
+		</div>
+	</div>
+	<div class="col-md-3">
+	<%= link_to image_tag("Reservierung1.jpg", :class=> "img-photo"), '#' %>
+	</div>
+
+	
+</div>
+</div>
+
+<br>
+
